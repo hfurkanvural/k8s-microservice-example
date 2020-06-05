@@ -1,0 +1,7 @@
+version: "3"
+services:
+  microservice1:
+    image: hfurkanvural/microservice2
+    ports:
+      - 8080:8080
+  
