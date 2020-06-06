@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: simple-reverseproxy
+  labels:
+    app: simple-reverseproxy
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: simple-reverseproxy
+  template:
+    metadata:
+      labels:
+        app: simple-reverseproxy
+    spec:
+      containers:
+      - name: simple-reverseproxy
+        image: hfurkanvural/simple_reverseproxy
+        ports:
+          - containerPort: 8080
