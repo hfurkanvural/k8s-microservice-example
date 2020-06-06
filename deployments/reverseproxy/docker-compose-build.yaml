@@ -1,0 +1,15 @@
+version: "3"
+services:
+  reverseproxy:
+    build:
+      context: .
+    image: hfurkanvural/simple_reverseproxy
+  microservice1:
+    build:
+      context: ../ms1
+    image: hfurkanvural/microservice1
+  microservice2:
+    build:
+      context: ../ms2
+    image: hfurkanvural/microservice2
+

@@ -1,0 +1,15 @@
+version: "3"
+services:
+  reverseproxy:
+    image: hfurkanvural/simple_reverseproxy
+    ports:
+      - 8080:8080
+    restart: always
+    depends_on:
+      - microservice1
+      - microservice2
+  microservice1:
+    image: hfurkanvural/microservice1
+  microservice2:
+    image: hfurkanvural/microservice2
+
