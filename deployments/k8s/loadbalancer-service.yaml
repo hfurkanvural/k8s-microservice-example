@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: microservice-loadbalancer
+spec:
+  selector:
+    app: microservice-trial
+  ports:
+    - port: 8000
+      targetPort: 8080
+  type: LoadBalancer
